@@ -1,0 +1,591 @@
+/* RESET */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f5f5f5;
+    overflow-x:hidden;
+    color:#111;
+}
+
+/* NAVBAR */
+
+.navbar{
+    width:100%;
+    height:80px;
+    background:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 70px;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:1000;
+    border-bottom:1px solid #e5e5e5;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:800;
+    letter-spacing:1px;
+}
+
+nav{
+    display:flex;
+    gap:35px;
+}
+
+nav a{
+    text-decoration:none;
+    color:#222;
+    font-size:15px;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#0057ff;
+}
+
+.navbar button{
+    background:#0057ff;
+    color:white;
+    border:none;
+    padding:12px 22px;
+    border-radius:10px;
+    cursor:pointer;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.navbar button:hover{
+    background:#0043c7;
+}
+
+/* HERO */
+
+.hero{
+    width:100%;
+    height:65vh;
+    background:url("imagenes/hero.jpg") center/cover;
+    position:relative;
+    display:flex;
+    align-items:center;
+    padding:0 80px;
+    margin-top:80px;
+}
+
+.overlay{
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.55);
+    top:0;
+    left:0;
+}
+
+.hero-texto,
+.contenido{
+    position:relative;
+    z-index:2;
+    color:white;
+    max-width:700px;
+}
+
+.hero-texto span,
+.contenido span{
+    background:#0057ff;
+    padding:8px 14px;
+    border-radius:8px;
+    font-size:13px;
+    font-weight:600;
+}
+
+.hero-texto h1,
+.contenido h1{
+    font-size:72px;
+    line-height:1.1;
+    margin:25px 0;
+    font-weight:800;
+}
+
+.hero-texto p,
+.contenido p{
+    font-size:20px;
+    color:#ddd;
+    line-height:1.7;
+}
+
+/* BOTONES */
+
+.botones{
+    display:flex;
+    gap:15px;
+    margin-top:35px;
+}
+
+.btn-principal{
+    background:#0057ff;
+    color:white;
+    border:none;
+    padding:16px 28px;
+    border-radius:12px;
+    cursor:pointer;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.btn-principal:hover{
+    background:#0043c7;
+}
+
+.btn-secundario{
+    background:transparent;
+    border:1px solid white;
+    color:white;
+    padding:16px 28px;
+    border-radius:12px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.btn-secundario:hover{
+    background:white;
+    color:black;
+}
+
+/* BUSCADOR */
+
+.buscador{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    margin-top:-45px;
+    position:relative;
+    z-index:20;
+}
+
+.buscador-box{
+    width:90%;
+    max-width:1300px;
+    background:white;
+    padding:25px;
+    border-radius:18px;
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+    justify-content:center;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+.buscador-box input,
+.buscador-box select{
+    padding:16px;
+    border:1px solid #ddd;
+    border-radius:12px;
+    min-width:220px;
+    background:#fafafa;
+    font-size:15px;
+}
+
+.btn-buscar{
+    background:#111;
+    color:white;
+    border:none;
+    padding:16px 30px;
+    border-radius:12px;
+    cursor:pointer;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.btn-buscar:hover{
+    background:#0057ff;
+}
+
+/* TITULOS */
+
+.titulo{
+    margin-bottom:60px;
+}
+
+.titulo h2{
+    font-size:48px;
+    margin-bottom:10px;
+}
+
+.titulo p{
+    color:#666;
+    font-size:18px;
+}
+
+/* CATALOGO */
+
+.catalogo{
+    padding:110px 70px;
+}
+
+.grid-autos{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
+    gap:30px;
+}
+
+/* CARD */
+
+.card-auto{
+    background:white;
+    border-radius:24px;
+    overflow:hidden;
+    transition:0.4s;
+    box-shadow:0 8px 25px rgba(0,0,0,0.07);
+}
+
+.card-auto:hover{
+    transform:translateY(-8px);
+}
+
+.img-box{
+    position:relative;
+}
+
+.img-box img{
+    width:100%;
+    height:240px;
+    object-fit:cover;
+}
+
+.badge{
+    position:absolute;
+    top:18px;
+    left:18px;
+    background:#111;
+    color:white;
+    padding:8px 12px;
+    border-radius:8px;
+    font-size:12px;
+    font-weight:600;
+}
+
+.nuevo{
+    background:#0057ff;
+}
+
+.contenido{
+    padding:25px;
+    color:#111;
+}
+
+.contenido h3{
+    font-size:30px;
+    margin-bottom:20px;
+}
+
+.info{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+    margin-bottom:20px;
+}
+
+.info span{
+    background:#f1f1f1;
+    color:#111;
+    padding:8px 12px;
+    border-radius:8px;
+    font-size:13px;
+}
+
+.contenido h4{
+    font-size:34px;
+    margin-bottom:25px;
+}
+
+.contenido button{
+    width:100%;
+    padding:16px;
+    border:none;
+    background:#111;
+    color:white;
+    border-radius:12px;
+    cursor:pointer;
+    transition:0.3s;
+    font-weight:600;
+}
+
+.contenido button:hover{
+    background:#0057ff;
+}
+
+/* DESTACADOS INICIO */
+
+.destacados{
+    padding:120px 70px;
+    background:white;
+}
+
+.autos{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+}
+
+.auto{
+    background:#f5f5f5;
+    border-radius:20px;
+    overflow:hidden;
+    transition:0.4s;
+}
+
+.auto:hover{
+    transform:translateY(-8px);
+}
+
+.auto img{
+    width:100%;
+    height:230px;
+    object-fit:cover;
+}
+
+.auto h3{
+    padding:25px;
+    font-size:28px;
+}
+
+/* FOOTER */
+
+footer{
+    background:#111;
+    color:white;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:40px;
+    padding:70px;
+}
+
+footer h3,
+footer h4{
+    margin-bottom:20px;
+}
+
+footer p{
+    color:#bbb;
+    line-height:1.8;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1000px){
+
+    nav{
+        display:none;
+    }
+
+    .hero-texto h1,
+    .contenido h1{
+        font-size:50px;
+    }
+}
+
+@media(max-width:700px){
+
+    .navbar,
+    .hero,
+    .catalogo,
+    .destacados,
+    footer{
+        padding-left:20px;
+        padding-right:20px;
+    }
+
+    .hero{
+        height:55vh;
+    }
+
+    .hero-texto h1,
+    .contenido h1{
+        font-size:36px;
+    }
+
+    .titulo h2{
+        font-size:34px;
+    }
+
+    .botones{
+        flex-direction:column;
+    }
+
+    .buscador-box{
+        padding:20px;
+    }
+
+    .buscador-box input,
+    .buscador-box select,
+    .btn-buscar{
+        width:100%;
+    }
+}/* FINANCIACION */
+
+.hero-financiacion{
+    width:100%;
+    height:60vh;
+    background:url("imagenes/finance.jpg") center/cover;
+    position:relative;
+    display:flex;
+    align-items:center;
+    padding:0 80px;
+    margin-top:80px;
+}
+
+.contenido-financiacion{
+    position:relative;
+    z-index:2;
+    color:white;
+    max-width:700px;
+}
+
+.contenido-financiacion span{
+    background:#0057ff;
+    padding:8px 14px;
+    border-radius:8px;
+    font-size:13px;
+}
+
+.contenido-financiacion h1{
+    font-size:68px;
+    line-height:1.1;
+    margin:25px 0;
+}
+
+.contenido-financiacion p{
+    font-size:20px;
+    color:#ddd;
+    line-height:1.7;
+}
+
+.planes{
+    padding:120px 70px;
+}
+
+.grid-planes{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:30px;
+}
+
+.plan-card{
+    background:white;
+    border-radius:24px;
+    padding:40px;
+    box-shadow:0 8px 25px rgba(0,0,0,0.07);
+    position:relative;
+    transition:0.4s;
+}
+
+.plan-card:hover{
+    transform:translateY(-8px);
+}
+
+.plan-card h3{
+    font-size:34px;
+    margin-bottom:20px;
+}
+
+.plan-card h4{
+    color:#0057ff;
+    margin-bottom:20px;
+    font-size:22px;
+}
+
+.plan-card p{
+    color:#666;
+    line-height:1.8;
+    margin-bottom:30px;
+}
+
+.plan-card button{
+    width:100%;
+    padding:16px;
+    border:none;
+    background:#111;
+    color:white;
+    border-radius:12px;
+    cursor:pointer;
+    transition:0.3s;
+    font-weight:600;
+}
+
+.plan-card button:hover{
+    background:#0057ff;
+}
+
+.destacado{
+    border:2px solid #0057ff;
+}
+
+.recomendado{
+    position:absolute;
+    top:20px;
+    right:20px;
+    background:#0057ff;
+    color:white;
+    padding:8px 12px;
+    border-radius:8px;
+    font-size:12px;
+    font-weight:600;
+}
+
+/* BENEFICIOS */
+
+.beneficios{
+    background:#111;
+    padding:120px 70px;
+}
+
+.blanco h2{
+    color:white;
+}
+
+.grid-beneficios{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.beneficio{
+    background:#1c1c1c;
+    padding:40px;
+    border-radius:20px;
+    color:white;
+}
+
+.beneficio h3{
+    font-size:28px;
+    margin-bottom:20px;
+}
+
+.beneficio p{
+    color:#bbb;
+    line-height:1.8;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:700px){
+
+    .hero-financiacion,
+    .planes,
+    .beneficios{
+        padding-left:20px;
+        padding-right:20px;
+    }
+
+    .contenido-financiacion h1{
+        font-size:40px;
+    }
+}
