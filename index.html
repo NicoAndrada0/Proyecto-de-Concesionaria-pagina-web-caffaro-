@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Peugeot Store - Concesionaria oficial. Vehículos premium con garantía, financiación y servicio técnico.">
+    <title>Peugeot Store | Concesionaria Oficial</title>
+    
+    <!-- CSS GENERAL -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- CSS POR SECCIONES -->
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/catalogo.css">
+    <link rel="stylesheet" href="css/financiacion.css">
+    <link rel="stylesheet" href="css/servicios.css">
+    <link rel="stylesheet" href="css/promociones.css">
+    <link rel="stylesheet" href="css/testimonios.css">
+    <link rel="stylesheet" href="css/faq.css">
+    <link rel="stylesheet" href="css/contacto.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<!-- ==================== NAVBAR ==================== -->
+<header class="navbar" id="navbar">
+    <div class="container navbar-container">
+        <div class="logo">
+            <i class="fas fa-car"></i>
+            <span>PEUGEOT STORE</span>
+        </div>
+
+        <button class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav class="nav-menu" id="navMenu">
+            <a href="#inicio" class="nav-link">Inicio</a>
+            <a href="#catalogo" class="nav-link">Catálogo</a>
+            <a href="#financiacion" class="nav-link">Financiación</a>
+            <a href="#servicios" class="nav-link">Servicios</a>
+            <a href="#promociones" class="nav-link">Promociones</a>
+            <a href="#nosotros" class="nav-link">Nosotros</a>
+            <a href="#contacto" class="nav-link">Contacto</a>
+        </nav>
+
+        <a href="#contacto" class="btn-consultar">
+            Consultar
+        </a>
+    </div>
+</header>
+
+<!-- ==================== HERO SECTION ==================== -->
+<section class="hero" id="inicio">
+    <div class="hero-overlay"></div>
+    
+    <div class="container hero-content">
+        <div class="hero-text">
+            <span class="hero-badge">CONCESIONARIA OFICIAL PEUGEOT</span>
+            <h1 class="hero-title">Tu Próximo Viaje Comienza Aquí</h1>
+            <p class="hero-subtitle">Vehículos premium con garantía oficial, financiación flexible y atención personalizada.</p>
+            
+            <div class="hero-buttons">
+                <a href="#catalogo" class="btn btn-primary">Explorar Catálogo</a>
+                <a href="#contacto" class="btn btn-secondary">Solicitar Información</a>
+            </div>
+        </div>
+
+        <div class="hero-stats">
+            <div class="stat">
+                <h3>500+</h3>
+                <p>Vehículos en Stock</p>
+            </div>
+            <div class="stat">
+                <h3>15 Años</h3>
+                <p>De Experiencia</p>
+            </div>
+            <div class="stat">
+                <h3>10K+</h3>
+                <p>Clientes Satisfechos</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== BUSCADOR AVANZADO ==================== -->
+<section class="buscador-section">
+    <div class="container">
+        <h2>Encuentra tu Peugeot Ideal</h2>
+        <div class="buscador-box">
+            <select id="tipoVehiculo" class="buscador-input">
+                <option value="">Tipo de Vehículo</option>
+                <option value="sedan">Sedán</option>
+                <option value="suv">SUV</option>
+                <option value="comercial">Comercial</option>
+            </select>
+
+            <select id="rango" class="buscador-input">
+                <option value="">Rango de Precio</option>
+                <option value="0-5m">Hasta 5M</option>
+                <option value="5m-10m">5M a 10M</option>
+                <option value="10m">Más de 10M</option>
+            </select>
+
+            <select id="estado" class="buscador-input">
+                <option value="">Estado</option>
+                <option value="0km">0km</option>
+                <option value="usado">Usado</option>
+            </select>
+
+            <button class="btn-buscar" onclick="filtrarVehiculos()">
+                <i class="fas fa-search"></i> Buscar
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== CATÁLOGO DE VEHÍCULOS ==================== -->
+<section class="catalogo" id="catalogo">
+    <div class="container">
+        <div class="titulo">
+            <h2>Nuestro Catálogo Premium</h2>
+            <p>Descubre la completa línea de vehículos Peugeot con tecnología de última generación</p>
+        </div>
+
+        <div class="grid-autos" id="gridAutos">
+            <!-- Tarjetas de vehículos se cargarán aquí -->
+        </div>
+    </div>
+</section>
+
+<!-- ==================== CARACTERÍSTICAS PRINCIPALES ==================== -->
+<section class="caracteristicas">
+    <div class="container">
+        <h2>¿Por qué elegir Peugeot Store?</h2>
+        
+        <div class="grid-caracteristicas">
+            <div class="caracteristica-card">
+                <div class="icono">
+                    <i class="fas fa-certificate"></i>
+                </div>
+                <h3>Garantía Oficial</h3>
+                <p>Garantía de fábrica extendida hasta 7 años en modelos 0km.</p>
+            </div>
+
+            <div class="caracteristica-card">
+                <div class="icono">
+                    <i class="fas fa-dollar-sign"></i>
+                </div>
+                <h3>Financiación Flexible</h3>
+                <p>Hasta 84 cuotas con tasas preferenciales para clientes.</p>
+            </div>
+
+            <div class="caracteristica-card">
+                <div class="icono">
+                    <i class="fas fa-headset"></i>
+                </div>
+                <h3>Atención 24/7</h3>
+                <p>Equipo de asesores disponible para resolver tus dudas.</p>
+            </div>
+
+            <div class="caracteristica-card">
+                <div class="icono">
+                    <i class="fas fa-tools"></i>
+                </div>
+                <h3>Service Oficial</h3>
+                <p>Taller técnico certificado con piezas originales Peugeot.</p>
+            </div>
+
+            <div class="caracteristica-card">
+                <div class="icono">
+                    <i class="fas fa-truck"></i>
+                </div>
+                <h3>Entrega Inmediata</h3>
+                <p>Retira tu vehículo en el día o a domicilio sin costo.</p>
+            </div>
+
+            <div class="caracteristica-card">
+                <div class="icono">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3>Seguro Incluido</h3>
+                <p>Primer año de seguro integral incluido en 0km.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== SECCIÓN DE FINANCIACIÓN ==================== -->
+<section class="financiacion" id="financiacion">
+    <div class="container">
+        <div class="titulo">
+            <h2>Planes de Financiación</h2>
+            <p>Elige el plan que mejor se adapte a tu economía</p>
+        </div>
+
+        <div class="grid-planes">
+            <div class="plan-card">
+                <div class="plan-header">
+                    <h3>Plan Acceso</h3>
+                    <p class="plan-cuotas">Hasta 36 cuotas</p>
+                </div>
+                <div class="plan-body">
+                    <div class="plan-item">
+                        <i class="fas fa-check"></i>
+                        <span>Tasa desde 9.99%</span>
+                    </div>
+                    <div class="plan-item">
+                        <i class="fas fa-check"></i>
+                        <span>Entrega en 5 días hábiles</span>
+                    </div>
+                    <div class="plan-item">
+                        <i class="fas fa-check"></i>
+                        <span>Cuotas fijas garantizadas</span>
+                    </div>
+                    <div class="plan-item">
+                        <i class="fas fa-check"></i>
+                        <span>Sin sorpresas ocultas</span>
+                    </div>
+                </div>
+                <button class="btn btn-plan">Consultar Plan</button>
+            </div>
+
+            <div class="plan-card destacado">
+                <span class="badge-recomendado">MÁS ELEGIDO</span>
+                <div class="plan-header">
+                    <h3>Plan Premium</h3>
+                    <p class="plan-cuotas">Hasta 60 cuotas</p>
+                </div>
+                <div class="plan-body">
+                    <div class="plan-item">
+                        <i class="fas fa-check"></i>
+                        <span>Tasa preferencial 7.99%</span>
+                    </div>
+                    <div class="plan-item">
+                        <i class="fas fa-check"></i>
+                        <span>Cuotas más bajas del mercado</span>
+                    </div>
+                    <div class="plan-item">
+                        <i class="fas fa-check"></i>
+                        <span>Seguimiento personalizado</span>
+                    </div>
+                    <div class="plan-item">
+                        <i class="fas fa-check"></i>
+                        <span>Beneficios exclusivos</span>
+                    </div>
+                </div>
+                <button class="btn btn-plan">Consultar Plan</button>
+            </div>
+
+            <div class="plan-card">
+                <div class="plan-header">
+                    <h3>Plan Empresas</h3>
+                    <p class="plan-cuotas">Hasta 84 cuotas</p>
+                </div>
+                <div class="plan-body">
+                    <div class="plan-item">
+                        <i class="fas fa-check"></i>
+                        <span>Soluciones corporativas</span>
+                    </div>
+                    <div class="plan-item">
+                        <i class="fas fa-check"></i>
+                        <span>Flota con descuentos</span>
+                    </div>
+                    <div class="plan-item">
+                        <i class="fas fa-check"></i>
+                        <span>Asesor dedicado</span>
+                    </div>
+                    <div class="plan-item">
+                        <i class="fas fa-check"></i>
+                        <span>Mantenimiento incluido</span>
+                    </div>
+                </div>
+                <button class="btn btn-plan">Consultar Plan</button>
+            </div>
+        </div>
+
+        <div class="simulador">
+            <h3>Simulador de Cuotas</h3>
+            <div class="simulador-form">
+                <div class="form-group">
+                    <label>Monto a Financiar</label>
+                    <input type="range" id="montoSlider" min="1000000" max="10000000" value="5000000" oninput="actualizarSimulador()">
+                    <div class="simulador-valor">$<span id="montoValor">5.000.000</span></div>
+                </div>
+
+                <div class="form-group">
+                    <label>Cantidad de Cuotas</label>
+                    <select id="cuotasSelect" onchange="actualizarSimulador()">
+                        <option value="36">36 cuotas</option>
+                        <option value="48">48 cuotas</option>
+                        <option value="60" selected>60 cuotas</option>
+                        <option value="72">72 cuotas</option>
+                        <option value="84">84 cuotas</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Tasa de Interés</label>
+                    <select id="tasaSelect" onchange="actualizarSimulador()">
+                        <option value="7.99">7.99% (Premium)</option>
+                        <option value="9.99">9.99% (Acceso)</option>
+                        <option value="12.99">12.99% (Estándar)</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="simulador-resultado">
+                <div class="resultado-item">
+                    <span>Cuota Mensual</span>
+                    <h2>$<span id="cuotaMensual">95.432</span></h2>
+                </div>
+                <div class="resultado-item">
+                    <span>Total a Pagar</span>
+                    <h2>$<span id="totalPagar">5.725.920</span></h2>
+                </div>
+                <div class="resultado-item">
+                    <span>Intereses Totales</span>
+                    <h2>$<span id="interesTotal">725.920</span></h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== SERVICIOS ==================== -->
+<section class="servicios" id="servicios">
+    <div class="container">
+        <div class="titulo">
+            <h2>Nuestros Servicios</h2>
+            <p>Soporte completo para tu vehículo Peugeot</p>
+        </div>
+
+        <div class="grid-servicios">
+            <div class="servicio-card">
+                <div class="servicio-icon">
+                    <i class="fas fa-tools"></i>
+                </div>
+                <h3>Service Técnico</h3>
+                <p>Mantenimiento preventivo y correctivo con mecánicos certificados y piezas originales Peugeot.</p>
+                <a href="#contacto" class="link-servicio">Agendar cita →</a>
+            </div>
+
+            <div class="servicio-card">
+                <div class="servicio-icon">
+                    <i class="fas fa-cogs"></i>
+                </div>
+                <h3>Repuestos Originales</h3>
+                <p>Catálogo completo de piezas genuinas Peugeot con garantía de fábrica y disponibilidad inmediata.</p>
+                <a href="#contacto" class="link-servicio">Consultar disponibilidad →</a>
+            </div>
+
+            <div class="servicio-card">
+                <div class="servicio-icon">
+                    <i class="fas fa-car-crash"></i>
+                </div>
+                <h3>Taller de Chapa</h3>
+                <p>Reparación de daños menores y mayores con tecnología de punta y pintura electrostática.</p>
+                <a href="#contacto" class="link-servicio">Solicitar presupuesto →</a>
+            </div>
+
+            <div class="servicio-card">
+                <div class="servicio-icon">
+                    <i class="fas fa-certificate"></i>
+                </div>
+                <h3>Garantía Extendida</h3>
+                <p>Protege tu inversión con planes de garantía extendida hasta los 7 años de uso.</p>
+                <a href="#contacto" class="link-servicio">Más información →</a>
+            </div>
+
+            <div class="servicio-card">
+                <div class="servicio-icon">
+                    <i class="fas fa-sync-alt"></i>
+                </div>
+                <h3>Cambios de Óleo</h3>
+                <p>Servicio express de cambio de aceite y filtros con piezas originales certificadas.</p>
+                <a href="#contacto" class="link-servicio">Promoción vigente →</a>
+            </div>
+
+            <div class="servicio-card">
+                <div class="servicio-icon">
+                    <i class="fas fa-wrench"></i>
+                </div>
+                <h3>Diagnóstico Computarizado</h3>
+                <p>Escaneo completo del sistema electrónico para identificar cualquier anomalía.</p>
+                <a href="#contacto" class="link-servicio">Agendar ahora →</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== PROMOCIONES ==================== -->
+<section class="promociones" id="promociones">
+    <div class="container">
+        <div class="titulo">
+            <h2>Promociones Vigentes</h2>
+            <p>Ofertas especiales en modelos seleccionados</p>
+        </div>
+
+        <div class="grid-promociones">
+            <div class="promo-card">
+                <div class="promo-badge">-15%</div>
+                <div class="promo-image">
+                    <img src="https://via.placeholder.com/400x250/0057ff/ffffff?text=Peugeot+208" alt="Peugeot 208">
+                </div>
+                <div class="promo-content">
+                    <h3>Peugeot 208 Active</h3>
+                    <p>El sedán más icónico de la marca con tecnología de última generación.</p>
+                    <div class="promo-precio">
+                        <span class="precio-anterior">$4.850.000</span>
+                        <span class="precio-actual">$4.122.500</span>
+                    </div>
+                    <small>Válido hasta 30 de junio 2024</small>
+                    <a href="#contacto" class="btn btn-promo">Consultar Oferta</a>
+                </div>
+            </div>
+
+            <div class="promo-card">
+                <div class="promo-badge">-12%</div>
+                <div class="promo-image">
+                    <img src="https://via.placeholder.com/400x250/0057ff/ffffff?text=Peugeot+2008" alt="Peugeot 2008">
+                </div>
+                <div class="promo-content">
+                    <h3>Peugeot 2008 SUV</h3>
+                    <p>SUV compacta con excelente espacio interior y comodidad premium.</p>
+                    <div class="promo-precio">
+                        <span class="precio-anterior">$6.500.000</span>
+                        <span class="precio-actual">$5.720.000</span>
+                    </div>
+                    <small>Válido hasta 30 de junio 2024</small>
+                    <a href="#contacto" class="btn btn-promo">Consultar Oferta</a>
+                </div>
+            </div>
+
+            <div class="promo-card">
+                <div class="promo-badge">REGALO</div>
+                <div class="promo-image">
+                    <img src="https://via.placeholder.com/400x250/0057ff/ffffff?text=Peugeot+Partner" alt="Peugeot Partner">
+                </div>
+                <div class="promo-content">
+                    <h3>Peugeot Partner Van</h3>
+                    <p>Vehículo comercial con máxima capacidad de carga y versatilidad.</p>
+                    <div class="promo-precio">
+                        <span class="precio-anterior">$3.900.000</span>
+                        <span class="precio-actual">$3.900.000</span>
+                    </div>
+                    <small>+ 1 año de mantenimiento incluido</small>
+                    <a href="#contacto" class="btn btn-promo">Consultar Oferta</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== TESTIMONIOS ==================== -->
+<section class="testimonios">
+    <div class="container">
+        <div class="titulo">
+            <h2>Lo que Dicen Nuestros Clientes</h2>
+            <p>Experiencias reales de propietarios satisfechos</p>
+        </div>
+
+        <div class="grid-testimonios">
+            <div class="testimonio-card">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p>"Excelente atención y proceso de compra muy rápido. Mi Peugeot 208 superó todas mis expectativas."</p>
+                <div class="testimonio-autor">
+                    <strong>María González</strong>
+                    <span>Cliente desde 2022</span>
+                </div>
+            </div>
+
+            <div class="testimonio-card">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p>"El financiamiento fue accesible y el service técnico es de muy buena calidad. Recomiendo totalmente."</p>
+                <div class="testimonio-autor">
+                    <strong>Carlos Rodríguez</strong>
+                    <span>Propietario Peugeot Expert</span>
+                </div>
+            </div>
+
+            <div class="testimonio-card">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p>"Profesionales desde el primer contacto. El equipo de ventas me asesoró perfectamente según mis necesidades."</p>
+                <div class="testimonio-autor">
+                    <strong>Laura Martínez</strong>
+                    <span>Empresa de Logística</span>
+                </div>
+            </div>
+
+            <div class="testimonio-card">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p>"La garantía extendida me dio total tranquilidad. Peugeot Store es de confianza en toda la zona."</p>
+                <div class="testimonio-autor">
+                    <strong>Jorge Fernández</strong>
+                    <span>Propietario Peugeot 2008</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== PREGUNTAS FRECUENTES ==================== -->
+<section class="faq">
+    <div class="container">
+        <div class="titulo">
+            <h2>Preguntas Frecuentes</h2>
+            <p>Resuelve tus dudas sobre financiación, garantía y más</p>
+        </div>
+
+        <div class="grid-faq">
+            <div class="faq-item">
+                <button class="faq-pregunta" onclick="toggleFAQ(this)">
+                    <span>¿Cuál es el proceso para comprar un vehículo?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-respuesta">
+                    <p>El proceso es simple: (1) Elige tu vehículo, (2) Completa la solicitud de financiación, (3) Realiza la tasación, (4) Firma la documentación, (5) Retira tu auto en 5 días hábiles. Nuestro equipo te acompaña en cada paso.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-pregunta" onclick="toggleFAQ(this)">
+                    <span>¿Qué documentación necesito para financiar?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-respuesta">
+                    <p>Necesitas: DNI, últimas 3 liquidaciones de sueldo, comprobante de domicilio, y comprobantes de ingresos. Si eres monotributista o profesional, también requerimos balances contables. Te asesoramos sobre documentación faltante.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-pregunta" onclick="toggleFAQ(this)">
+                    <span>¿Cómo es la garantía de los vehículos 0km?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-respuesta">
+                    <p>Todos nuestros vehículos 0km incluyen garantía oficial de Peugeot por 3 años o 100.000 km. Ofrecemos planes de extensión hasta 7 años con cobertura completa incluyendo partes eléctricas y electrónicas.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-pregunta" onclick="toggleFAQ(this)">
+                    <span>¿Ofrecen cambio de vehículo usado?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-respuesta">
+                    <p>Sí, aceptamos tu vehículo usado como parte de pago. Realizamos tasación profesional considerando marca, modelo, año, kilometraje y estado general. Te ofrecemos el mejor valor del mercado.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-pregunta" onclick="toggleFAQ(this)">
+                    <span>¿Cómo es el service y mantenimiento?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-respuesta">
+                    <p>Contamos con taller oficial certificado. Ofrecemos planes de mantenimiento preventivo con descuentos especiales para clientes. El primer cambio de aceite es gratuito en todos los 0km.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-pregunta" onclick="toggleFAQ(this)">
+                    <span>¿Puedo devolver el vehículo si no me gusta?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-respuesta">
+                    <p>Dentro de los primeros 7 días de compra, si el vehículo no recorró más de 100 km, puedes solicitar cambio por otro modelo o devolución con reembolso del 95% del valor pagado.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== NOSOTROS ==================== -->
+<section class="nosotros" id="nosotros">
+    <div class="container">
+        <div class="nosotros-content">
+            <div class="nosotros-text">
+                <h2>Sobre Peugeot Store</h2>
+                <p>Con más de 15 años de trayectoria, Peugeot Store se ha consolidado como la concesionaria oficial de referencia en la región. Nuestro compromiso es proporcionar soluciones automotrices integrales, desde la venta de vehículos premium hasta servicios técnicos especializados.</p>
+
+                <div class="mision-vision">
+                    <div class="mv-card">
+                        <h4><i class="fas fa-bullseye"></i> Misión</h4>
+                        <p>Ofrecer vehículos Peugeot de calidad con atención personalizada, financiación accesible y soporte técnico de excelencia.</p>
+                    </div>
+                    <div class="mv-card">
+                        <h4><i class="fas fa-eye"></i> Visión</h4>
+                        <p>Ser la concesionaria Peugeot líder en la región, reconocida por profesionalismo, innovación y satisfacción del cliente.</p>
+                    </div>
+                    <div class="mv-card">
+                        <h4><i class="fas fa-heart"></i> Valores</h4>
+                        <p>Confianza, transparencia, excelencia, compromiso con el cliente y responsabilidad social empresarial.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nosotros-stats">
+                <div class="stat-box">
+                    <h3>15+</h3>
+                    <p>Años de trayectoria</p>
+                </div>
+                <div class="stat-box">
+                    <h3>10.000+</h3>
+                    <p>Clientes satisfechos</p>
+                </div>
+                <div class="stat-box">
+                    <h3>500+</h3>
+                    <p>Vehículos en stock</p>
+                </div>
+                <div class="stat-box">
+                    <h3>98%</h3>
+                    <p>Tasa de satisfacción</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== CONTACTO ==================== -->
+<section class="contacto" id="contacto">
+    <div class="container">
+        <div class="titulo">
+            <h2>Contáctanos</h2>
+            <p>Estamos aquí para ayudarte. Conecta con nuestro equipo de expertos</p>
+        </div>
+
+        <div class="contacto-content">
+            <div class="contacto-info">
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="info-text">
+                        <h3>Ubicación</h3>
+                        <p>Av. Juan Bautista Alberski 2850<br>Chivilcoy, Buenos Aires<br>Argentina</p>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="info-text">
+                        <h3>Teléfono</h3>
+                        <p>+54 (236) 442-2850<br>+54 9 11 6234-5678<br>WhatsApp: +54 9 11 6234-5678</p>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="info-text">
+                        <h3>Email</h3>
+                        <p>ventas@peugeotstore.com<br>service@peugeotstore.com<br>financiacion@peugeotstore.com</p>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="info-text">
+                        <h3>Horarios</h3>
+                        <p>Lunes a Viernes: 8:00 - 18:00<br>Sábados: 9:00 - 14:00<br>Domingos: Cerrado</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contacto-form-container">
+                <form class="contacto-form" id="formContacto" onsubmit="enviarFormulario(event)">
+                    <div class="form-group">
+                        <input type="text" placeholder="Tu nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Tu email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" placeholder="Tu teléfono" required>
+                    </div>
+                    <div class="form-group">
+                        <select required>
+                            <option value="">Selecciona asunto</option>
+                            <option value="compra">Consulta sobre compra</option>
+                            <option value="financiacion">Consulta sobre financiación</option>
+                            <option value="service">Consulta sobre service</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Tu mensaje" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">Enviar Mensaje</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- MAPA -->
+        <div class="mapa-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3272.8901682836977!2d-61.82972532346205!3d-35.34862196688159!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95c53c8b9b8b8b9b%3A0x9b8b8b9b8b8b8b9b!2sChivilcoy%2C%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1234567890" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Peugeot Store</h4>
+                <p>Concesionaria oficial Peugeot con más de 15 años de experiencia en venta de vehículos premium y servicios técnicos especializados.</p>
+                <div class="redes-sociales">
+                    <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h4>Navegación</h4>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#catalogo">Catálogo</a></li>
+                    <li><a href="#financiacion">Financiación</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Servicios</h4>
+                <ul>
+                    <li><a href="#servicios">Service Técnico</a></li>
+                    <li><a href="#servicios">Repuestos Originales</a></li>
+                    <li><a href="#servicios">Taller de Chapa</a></li>
+                    <li><a href="#servicios">Garantía Extendida</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Términos y Condiciones</a></li>
+                    <li><a href="#">Política de Privacidad</a></li>
+                    <li><a href="#">Política de Cookies</a></li>
+                    <li><a href="#">Certificaciones</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 Peugeot Store. Todos los derechos reservados. | Sitio web profesional para exposición académica</p>
+        </div>
+    </div>
+</footer>
+
+<!-- ==================== WHATSAPP FLOTANTE ==================== -->
+<a href="https://wa.me/5491162345678" class="whatsapp-float" target="_blank" title="Contactar por WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- ==================== SCRIPTS ==================== -->
+<script src="js/main.js"></script>
+<script src="js/navbar.js"></script>
+<script src="js/catalogo.js"></script>
+<script src="js/simulador.js"></script>
+<script src="js/faq.js"></script>
+<script src="js/formulario.js"></script>
+<script src="js/animaciones.js"></script>
+
+</body>
+</html>

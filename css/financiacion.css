@@ -1,0 +1,185 @@
+/* FINANCIACIÓN */
+.financiacion {
+    background: white;
+    padding: 80px 0;
+}
+
+.grid-planes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    margin-bottom: 80px;
+}
+
+.plan-card {
+    background: white;
+    border-radius: 18px;
+    padding: 40px 30px;
+    border: 2px solid #e5e5e5;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+    position: relative;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.plan-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
+    border-color: #0057ff;
+}
+
+.plan-card.destacado {
+    border-color: #0057ff;
+    background: linear-gradient(135deg, rgba(0, 87, 255, 0.02), rgba(0, 87, 255, 0.05));
+    transform: scale(1.02);
+}
+
+.badge-recomendado {
+    position: absolute;
+    top: -12px;
+    right: 20px;
+    background: #0057ff;
+    color: white;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+}
+
+.plan-header {
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.plan-header h3 {
+    font-size: 26px;
+    color: #111;
+    margin-bottom: 8px;
+}
+
+.plan-cuotas {
+    color: #0057ff;
+    font-weight: 700;
+    font-size: 14px;
+    margin: 0;
+}
+
+.plan-body {
+    flex: 1;
+    margin-bottom: 30px;
+}
+
+.plan-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 0;
+    color: #666;
+    font-size: 14px;
+}
+
+.plan-item i {
+    color: #0057ff;
+}
+
+.btn-plan {
+    width: 100%;
+    padding: 14px 24px;
+    background: #111;
+    color: white;
+    border: 2px solid #111;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-plan:hover {
+    background: #0057ff;
+    border-color: #0057ff;
+}
+
+.simulador {
+    background: #f5f5f5;
+    padding: 50px 40px;
+    border-radius: 18px;
+    margin-top: 50px;
+}
+
+.simulador h3 {
+    font-size: 24px;
+    margin-bottom: 40px;
+    text-align: center;
+    color: #111;
+}
+
+.simulador-form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 12px;
+    font-size: 14px;
+}
+
+.form-group select {
+    padding: 12px 15px;
+    border: 2px solid #e5e5e5;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.form-group select:focus {
+    outline: none;
+    border-color: #0057ff;
+}
+
+.simulador-valor {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 12px;
+    font-weight: 700;
+    font-size: 18px;
+    color: #0057ff;
+}
+
+.simulador-resultado {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+    padding: 40px 0;
+}
+
+.resultado-item {
+    text-align: center;
+}
+
+.resultado-item span {
+    display: block;
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.resultado-item h2 {
+    font-size: 28px;
+    color: #0057ff;
+    margin: 0;
+}
